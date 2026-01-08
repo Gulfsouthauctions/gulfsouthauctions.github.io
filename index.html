@@ -5,16 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gulf South Auctions</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #ffffff; color: #333; }
-        .container { max-width: 800px; margin: auto; text-align: center; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #ffffff; color: #333; }
+        .container { max-width: 800px; margin: auto; text-align: center; padding: 20px; }
         .header-image { width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         .btn-container { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
         .btn { background-color: #000; color: #fff; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
         .fb-btn { background-color: #1877F2; color: white; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; margin-top: 10px; }
         .heritage { text-align: left; background: #f4f4f4; padding: 20px; border-radius: 10px; margin-top: 30px; }
+        
+        /* Menu Styling */
+        #navMenu { display: none; background: #000; width: 100%; text-align: left; padding: 10px 0; position: absolute; z-index: 1000; }
+        #navMenu a { display: block; color: white; padding: 15px 25px; text-decoration: none; border-bottom: 1px solid #333; font-weight: bold; }
+        .hamburger-bar { width: 25px; height: 3px; background: black; margin: 5px; transition: 0.4s; }
     </style>
 </head>
 <body>
+
+<div style="background: #f4f4f4; padding: 15px; display: flex; align-items: center; border-bottom: 1px solid #ddd;">
+    <div id="hamburger" style="cursor: pointer;" onclick="toggleMenu()">
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+    </div>
+    <span style="margin-left: 15px; font-weight: bold; font-size: 1.2em;">MENU</span>
+</div>
+
+<div id="navMenu">
+    <a href="#" onclick="toggleMenu()">Home</a>
+    <a href="tel:9855140288">Call Cody</a>
+    <a href="https://www.facebook.com/share/1ASwSnM9Sj/">Facebook Auctions</a>
+    <a href="mailto:gulfsouthauctions@gmail.com">Email Us</a>
+</div>
 
 <div class="container">
     <img src="26984232-B5D2-4924-B784-D15D39B8841C.jpeg" alt="Gulf South Auctions Business Card" class="header-image">
@@ -30,9 +51,7 @@
     <div class="heritage">
         <h2>Our Heritage</h2>
         <p>My grandfather, Marvin Henderson, a legendary figure and the founder of the esteemed Henderson Auctions, where much of my growth and development took place, was a driving force behind my passion for this industry.</p>
-        <p>From standing in on auctions as a teenager to attending the prestigious World Wide College of Auctioneers, my journey in this field has been lifelong. While still collaborating with Henderson Auctions, my core values and interests remain aligned with the collective well-being of both organizations. Gulf South Auction's primary focus is on specializing in consulting, appraising, purchasing, and, selling heavy machinery. I have amassed a vast collection of knowledge spanning a wide range of categories, far beyond the heavy equipment sector.
-My portfolio encompasses various asset procurements, including real estate, residential, commercial, and industrial developments, aircrafts, home estate items, and numerous other categories.
-At Gulf South Auctions, we uphold a strong commitment in serving with excellence to safeguard the integrity of our business and our clients. We prioritize protecting the benefits and best interests of everyone involved. Rely on us for top-quality services, whether you are purchasing or selling your equipment.</p>
+        <p>From standing in on auctions as a teenager to attending the prestigious World Wide College of Auctioneers, my journey in this field has been lifelong. While still collaborating with Henderson Auctions, my core values and interests remain aligned with the collective well-being of both organizations. Gulf South Auction's primary focus is on specializing in consulting, appraising, purchasing, and, selling heavy machinery. I have amassed a vast collection of knowledge spanning a wide range of categories, far beyond the heavy equipment sector. My portfolio encompasses various asset procurements, including real estate, residential, commercial, and industrial developments, aircrafts, home estate items, and numerous other categories. At Gulf South Auctions, we uphold a strong commitment in serving with excellence to safeguard the integrity of our business and our clients. We prioritize protecting the benefits and best interests of everyone involved. Rely on us for top-quality services, whether you are purchasing or selling your equipment.</p>
     </div>
 
     <div style="margin-top: 40px; padding: 20px; border-top: 1px solid #ddd;">
@@ -44,6 +63,17 @@ At Gulf South Auctions, we uphold a strong commitment in serving with excellence
         &copy; 2026 Gulf South Auctions
     </footer>
 </div>
+
+<script>
+function toggleMenu() {
+    var x = document.getElementById("navMenu");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+}
+</script>
 
 </body>
 </html>
